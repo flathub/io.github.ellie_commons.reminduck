@@ -32,9 +32,9 @@ modules:
     buildsystem: meson
     sources:
       - type: git
-        url: https://github.com/ellie-commons/reminduck.git
-        tag: 2.3.0-1
-        commit: 286e1696b2ee76758ed483e9f6ed055e92e68450
+        url: https://github.com/elly-code/reminduck.git
+        tag: 2.3.1-5
+        commit: fca265ae745941088bcc4f9c101881c04f84489c
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
