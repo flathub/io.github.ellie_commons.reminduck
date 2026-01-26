@@ -1,31 +1,31 @@
 app-id: io.github.ellie_commons.reminduck
 # elementary SDK is not available on Flathub, so use the elementary BaseApp instead
 base: io.elementary.BaseApp
-base-version: 'circe-25.08'
+base-version: circe-25.08
 runtime: org.gnome.Platform
 runtime-version: '49'
 sdk: org.gnome.Sdk
 command: io.github.ellie_commons.reminduck
 
 finish-args:
-  - '--share=ipc'
-  - '--device=dri'
-  - '--socket=fallback-x11'
-  - '--socket=wayland'
+  - --share=ipc
+  - --device=dri
+  - --socket=fallback-x11
+  - --socket=wayland
   # Required to do a quack sound
-  - '--socket=pulseaudio'
+  - --socket=pulseaudio
 
 cleanup:
-  -  '/include'
-  -  '/lib/pkgconfig'
-  -  '/man'
-  -  '/share/doc'
-  -  '/share/gtk-doc'
-  -  '/share/man'
-  -  '/share/pkgconfig'
-  -  '/share/installed-tests'
-  -  '*.la'
-  -  '*.a'
+  - /include
+  - /lib/pkgconfig
+  - /man
+  - /share/doc
+  - /share/gtk-doc
+  - /share/man
+  - /share/pkgconfig
+  - /share/installed-tests
+  - '*.la'
+  - '*.a'
 
 modules:
   - name: reminduck
@@ -33,8 +33,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/elly-code/reminduck.git
-        tag: 2.3.1-5
-        commit: fca265ae745941088bcc4f9c101881c04f84489c
+        tag: 2.3.1
+        commit: 5a7ed806b77ca86a4f71ae1a431d72df37abf7b3
         x-checker-data:
           type: git
-          tag-pattern: '^([\d.]+)$'
+          tag-pattern: ^([\d.]+)$
