@@ -30,6 +30,8 @@ cleanup:
 modules:
   - name: reminduck
     buildsystem: meson
+    config-opts:
+      - --buildtype=release
     sources:
       - type: git
         url: https://github.com/elly-code/reminduck.git
